@@ -173,3 +173,16 @@ Here is an introduction in creating MySQL databases and querying them with R:
 And some information on R Shiny database basics:
 
 		https://shiny.rstudio.com/articles/overview.html
+
+## 12. Other useful tools used by our lab
+GitHub - make an account here and we'll add you to the lab project group
+
+		https://github.com/
+
+Slack - communication, sharing quick code snippets and links, cuts down on lengthy emails
+		
+		https://slack.com/
+
+Trello - project boards, lets you keep track of tasks. we have a lab group
+
+		https://trello.com/jensenlab/home
