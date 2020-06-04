@@ -14,7 +14,13 @@ Now that you've tried out the command line in a browser, let's see how it works 
 
 #### 1. Mac: Accessing the command line
 
-If you have a Mac, you actually have two operating systems installed. You have the Mac operating system that you typically interact with, and you have a Unix operating system that you can interact with via the terminal. To find the terminal, you can go to Applications > Utilities and find the application called "Terminal.app". The pathname (remember our Command Line tutorial above) is: /Applications/Utilities/Terminal.app Double click on Terminal.app. You are now in the Unix terminal on your Mac machine. 
+If you have a Mac, you actually have two operating systems installed. You have the Mac operating system that you typically interact with, and you have a Unix operating system that you can interact with via the terminal. To find the terminal, you can go to Applications > Utilities and find the application called "Terminal.app". The pathname (remember our Command Line tutorial above) is: /Applications/Utilities/Terminal.app Double click on Terminal.app. You are now in the Unix terminal on your Mac machine.
+
+##### Terminal Emulator: iTerm
+
+iTerm is a terminal emulator for Mac that has some additional functions to the native Terminal.app:
+
+		https://www.iterm2.com/
 
 #### 2. Windows: Accessing Linux-like command line
 If you are on a Windows machine, you can install MoabXterm, a Linux-like environment that will allow you to run basic Unix commands and to SSH/SFTP. You can install it from here:
@@ -29,6 +35,17 @@ Now that you have access to the shell/terminal on your computer, you can run thr
 
 		UNIX Tutorial for Beginners
 		http://www.ee.surrey.ac.uk/Teaching/Unix/
+
+#### 4. oh my zsh: shell alternative with additional functions
+Oh My Zsh is an open source, community-driven framework for managing your zsh configuration.
+
+Sounds boring. Let's try again.
+
+Oh My Zsh will not make you a 10x developer...but you may feel like one.
+
+Once installed, your terminal shell will become the talk of the town or your money back! With each keystroke in your command prompt, you'll take advantage of the hundreds of powerful plugins and beautiful themes. Strangers will come up to you in cafés and ask you, "that is amazing! are you some sort of genius?"
+
+		https://ohmyz.sh/
 
 ## 2. Text editors
 Throughout your coding, you'll want to use a text editor to write and read your code. While Word or Pages are easy to work with, they add invisible characters and are not saved in a format that can be input into other programs easily.
