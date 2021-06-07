@@ -105,11 +105,7 @@ SSH is the Secure Shell protocol (so, how to access your account on the cluster 
 
 Here is a tutorial for how to access the ASU cluster via SSH:
 
-		https://saguaro1.asu.edu/howto/logging_in_with_ssh.php
-and
-a tutorial for how to access the ASU cluster via SSH using NoMachine:
-
-		https://saguaro1.asu.edu/howto/logging_in_with_nx.php
+		https://cores.research.asu.edu/research-computing/user-guide#connect
 
 You may also want transfer files to/from the server. There are many ways to do this, but SFTP (Secure File Transfer Protocol) is one way. You can use a variety of tools, including MoabXterm (from above), the SFTP command line tools (https://linux.die.net/man/1/sftp), or a GUI-based SFTP program (people in the lab like FileZilla: https://filezilla-project.org and CyberDuck: https://cyberduck.io - both work for Mac or Windows). 
 
@@ -125,6 +121,10 @@ Here is a SLURM command creator:
 And here is a SLURM Quick Start Tutorial:
 
 		http://www.ceci-hpc.be/slurm_tutorial.html
+
+Here, you will find a tutorial on making and submitting a sbatch script on Agave:
+
+		https://github.com/SexChrLab/BioinformaticsIntroduction/tree/master/BatchTutorial
 
 ## 7. Git and Github
 Finally we get to the page you're actually on! Git and Github (while separate) are often used together to organize code for projects, allow collaborators to contribute to the project, and most importantly, manage multiple versions of code/documents. We will use Git and GitHub for our projects in lab. While most of the commands are fairly straitforward Git/GitHub uses specific terminology that you'll need to familiarize yourself with. 
