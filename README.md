@@ -42,12 +42,13 @@ If you like to work in the terminal you can use terminal-based text editors like
 
 		http://www.vim.org/
 
-Alternatively you may want a GUI-based text editor, like Sublime: 
+Alternatively you may want a GUI-based text editor, like Atom: 
+
+		https://atom.io/
+
+Or Sublime: 
 
 		https://www.sublimetext.com/
-
-Or Atom:
-		https://atom.io/
 
 ## 3. Introduction to python
 There are many different languages that we can write code or scripts in for analyzing our data. One of the most commonly used langauges in bioinfomatics is python. The tutorial at codecademy can help you get started with learning python syntax, though there are many other places to learn coding in python.
