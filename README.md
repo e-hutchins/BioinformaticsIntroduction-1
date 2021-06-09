@@ -29,7 +29,7 @@ If you are on a Windows machine, you can install MoabXterm, a Linux-like environ
 Now that you have access to the shell/terminal on your computer, you can run through additional tutorials. Students in the lab have found these tutorials useful: 
 
 		Learning the shell
-		http://linuxcommand.org/learning_the_shell.php
+		http://linuxcommand.org/lc3_learning_the_shell.php
 
 		UNIX Tutorial for Beginners
 		http://www.ee.surrey.ac.uk/Teaching/Unix/
