@@ -4,22 +4,24 @@ In this tutorial you will work through making a sbatch script, submitting this s
 ## Step 0 - Preparation
 Before starting this tutorial, you will need to read through ASURC slurm tutorial: https://asurc.atlassian.net/wiki/spaces/RC/pages/45678605/Creating+SBATCH+scripts. We will run a part of the sbatch script provided in this tutorial.
 
-## Step 1 - Log onto ASU's agave cluster
-In order to run an sbatch script on ASU's agave cluster, you need to log onto the cluster. If you do not have an account, you can request one from here: https://cores.research.asu.edu/research-computing/get-started/create-an-account.
+Also, make sure you are familiar with the setup of the [tgen dback cluster](https://github.com/tgen/tgenHPC_Notes) (login nodes, compute nodes, partitions, etc.).
 
-To log onto agave, open your terminal (or putty if you are on a windows device). Your login name is your asurite id and the password is the password you use to get onto myASU.
+## Step 1 - Log onto TGen's dback cluster
+In order to run an sbatch script on TGen's dback cluster, you need to log onto the cluster. If you do not have an account, you can request one from the TGen hub.
+
+To log onto dback, open your terminal (or putty if you are on a windows device). Your login name is your tgen id and the password is the password you use to get onto your tgen email account.
 
 ```
-# Example of how to log onto Agave after opening terminal.
+# Example of how to log onto dback's login node 1 after opening terminal.
 # Type the following
-ssh your-asurite-id@agave.asu.edu
+ssh your-tgen-id@dback-login1.tgen.org
 # Then press enter
 ```
 
 ## Step 2 - Create a sbatch script
 Create the sbatch script from the ASURC slurm tutorial. Only copy lines 1-25 (see below). Save the sbatch script as `my_first_sbatch.sh`.
 
-**Note:** You can make this file either on your local computer using a text editor of your choice and then transfer it to the cluster (using sftp to transfer the file) *or* you can make this file directly on the cluster using a text editor on the cluster like `vi`.
+**Note:** You can make this file either on your local computer using a text editor of your choice and then transfer it to the cluster (using sftp, cyberduck, or a server mount to transfer the file) *or* you can make this file directly on the cluster using a text editor on the cluster like `vi`.
 
 ```
 #!/bin/bash
@@ -27,18 +29,18 @@ Create the sbatch script from the ASURC slurm tutorial. Only copy lines 1-25 (se
 #SBATCH -N 1  # number of nodes
 #SBATCH -n 1  # number of "tasks" (default: allocates 1 core per task)
 #SBATCH -t 0-00:02:00   # time in d-hh:mm:ss
-#SBATCH -p serial       # partition
+#SBATCH -p defq         # partition; defq = default queue
 #SBATCH -q normal       # QOS
 #SBATCH -o slurm.%j.out # file to save job's STDOUT (%j = JobId)
 #SBATCH -e slurm.%j.err # file to save job's STDERR (%j = JobId)
 #SBATCH --mail-type=ALL # Send an e-mail when a job starts, stops, or fails
-#SBATCH --mail-user=%u@asu.edu # Mail-to address
+#SBATCH --mail-user=%u@tgen.org # Mail-to address
 #SBATCH --export=NONE   # Purge the job-submitting shell environment
 
 # Always purge modules to ensure consistent environments
 module purge    
 # Load required modules for job's environment
-module load anaconda/py3
+module load python/3.6.2
 ##
 # Generate 1,000,000 random numbers in bash,
 #   then store sorted results
@@ -65,7 +67,7 @@ You can check on the progress of your submitted sbatch script by using the follo
 
 ```
 # Look at the progress in the queue
-squeue -u your-asurite-id
+squeue -u your-tgen-id
 ```
 
 Because we work on shared resources on the cluster, your job will not always immediately start running. Also, depending on what commands you are running, some jobs may take hours or even days to complete. Because of this, it is important to be able to tell what is happening with your job - if it's just pending in the queue, running, or finished. To do this, use the above command. It will tell you if the job you have submitted is queued or running. It will also show if it has completed for a few seconds after finishing (after a few seconds it won’t be in the list anymore). Note that if you omit your username you can see everything queued on the cluster, but that is typically not useful at ASU because there are so many jobs constantly running or queued. Below is an example of what you will see with this command. `ST` is the status of the job and `PD` is bending and `R` will show if it is running and `CG` is canceled.
