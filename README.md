@@ -6,7 +6,7 @@ This includes links to codes, trainings, and other useful computational resource
 
 There are also additional topics:
 * terminal customization: additional resources for setting up your terminal environment
-* tgen hpc: information about how the tgen hpc system is set up, navigation tips, etc.
+* tgen hpc: see [this github repo](https://github.com/tgen/tgenHPC_Notes) for more information about the tgen dback cluster setup
 
 ## 1. Introduction to command line
 For any work we will do as computational biologists it is exceedingly useful to understand that there is a way of interacting with data via the command line. 
@@ -98,7 +98,7 @@ Or you can work in R studio using the swirl R package:
 ## 5. Introduction to SSH and SFTP
 For many of the types of analysis we do, you won't be able to run the analyses on your local computer. Instead, you'll need to access a computer cluster. 
 
-First, you'll need to make sure you have an account. For WilsonSayres lab members, please request an account on ASU Research Computing: https://researchcomputing.asu.edu 
+First, you'll need to make sure you have an account. For TGen lab members, please request an account through the TGen hub. 
 
 Second, you'll need to know how to get there.
 
@@ -111,7 +111,7 @@ Here is a tutorial for how to access the ASU cluster via SSH:
 You may also want transfer files to/from the server. There are many ways to do this, but SFTP (Secure File Transfer Protocol) is one way. You can use a variety of tools, including MoabXterm (from above), the SFTP command line tools (https://linux.die.net/man/1/sftp), or a GUI-based SFTP program (people in the lab like FileZilla: https://filezilla-project.org and CyberDuck: https://cyberduck.io - both work for Mac or Windows). 
 
 ## 6. Batch scripts
-Once you have an account on the cluster, you'll want to be able to run jobs. You may be tempted to run large jobs directly after logging in... don't. This is because of the typical strucutre of a cluster. Typically there is a login node where everyone goes when they log in to the cluster, and compute nodes, where most of the computation happens. To submit jobs that will need a lot of time or memory, you'll need to write a batch script to submit your job into a queue to run on the compute nodes. Trying to run large jobs on the login node will usually result in an error and a warning message. To get your jobs to run, you'll need to make a batch script. 
+Once you have an account on the cluster, you'll want to be able to run jobs. You may be tempted to run large jobs directly after logging in... don't. This is because of the typical structure of a cluster. Typically there is a login node where everyone goes when they log in to the cluster, and compute nodes, where most of the computation happens. To submit jobs that will need a lot of time or memory, you'll need to write a batch script to submit your job into a queue to run on the compute nodes. Trying to run large jobs on the login node will usually result in an error and a warning message. To get your jobs to run, you'll need to make a batch script. 
 
 A batch/job script for SLURM (the Simple Linux Utility for Resource Management) will list information about who is submitting the script, how long it will take, what kind of memory it requires, if it should go in a special queue, and then the commands to run your script or program. 
 
@@ -152,16 +152,24 @@ And FileZilla:
 
 		https://filezilla-project.org/
 
-## 9. Snakemake 
-One of the first rules of bioinformatics is that it is (nearly) always worth the time to make your analysis reproducible. Snakemake can help you with reproducible analyses. 
+## 9. Workflow management 
+One of the first rules of bioinformatics is that it is (nearly) always worth the time to make your analysis reproducible. Workflow manages can help you with reproducible analyses. 
 
-You can start out with this video: 
+Snakemake is a python based workflow manager. You can start out with this video: 
 
 		https://youtu.be/8xnm_RKkycQ
 
 And this tutorial:
 
 		http://slowkow.com/notes/snakemake-tutorial/
+
+TGen also has a workflow manager called jetstream:
+
+		https://github.com/tgen/jetstream
+
+Another widely used workflow manager is nextflow:
+
+		https://www.nextflow.io/
 
 
 ## 10. R Shiny
@@ -189,6 +197,6 @@ Slack - communication, sharing quick code snippets and links, cuts down on lengt
 		
 		https://slack.com/
 
-Trello - project boards, lets you keep track of tasks. we have a lab group
+Trello - project boards, lets you keep track of tasks. For Jensen lab members, we have a lab group
 
 		https://trello.com/jensenlab/home
