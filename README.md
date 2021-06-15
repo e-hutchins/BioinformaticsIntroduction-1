@@ -108,7 +108,11 @@ Here is a tutorial for how to access the ASU cluster via SSH:
 
 		https://cores.research.asu.edu/research-computing/user-guide#connect
 
-You may also want transfer files to/from the server. There are many ways to do this, but SFTP (Secure File Transfer Protocol) is one way. You can use a variety of tools, including MoabXterm (from above), the SFTP command line tools (https://linux.die.net/man/1/sftp), or a GUI-based SFTP program (people in the lab like FileZilla: https://filezilla-project.org and CyberDuck: https://cyberduck.io - both work for Mac or Windows). 
+Here is information specific to the tgen cluster (you will need a github account first):
+
+		https://github.com/tgen/tgenHPC_Notes
+
+You may also want transfer files to/from the server. There are many ways to do this, but SFTP (Secure File Transfer Protocol) is one way. You can use a variety of tools, including MoabXterm (from above), the SFTP command line tools (https://linux.die.net/man/1/sftp), or a GUI-based SFTP program (people in the lab like FileZilla: https://filezilla-project.org and CyberDuck: https://cyberduck.io - both work for Mac or Windows). For people at tgen, you can also do an smb mount to show a window in your finder.
 
 ## 6. Batch scripts
 Once you have an account on the cluster, you'll want to be able to run jobs. You may be tempted to run large jobs directly after logging in... don't. This is because of the typical structure of a cluster. Typically there is a login node where everyone goes when they log in to the cluster, and compute nodes, where most of the computation happens. To submit jobs that will need a lot of time or memory, you'll need to write a batch script to submit your job into a queue to run on the compute nodes. Trying to run large jobs on the login node will usually result in an error and a warning message. To get your jobs to run, you'll need to make a batch script. 
@@ -141,6 +145,10 @@ Here is a "hello world" tutorial for GitHub (you don't need to know how to progr
 And are some GitHub guides:
 
 		https://guides.github.com
+
+For some more in depth GitHub topics, check out the docs:
+
+		https://docs.github.com/en/github
 
 ## 8. Secure File Transfer 
 When you are working on a cluster, you will at some point want to transfer files from your local computer to the cluster or from the cluster to your computer. You can do this using SFTP from the command line, or using a SFTP graphical user interface too.  
