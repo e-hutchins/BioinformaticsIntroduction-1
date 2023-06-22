@@ -42,9 +42,9 @@ If you like to work in the terminal you can use terminal-based text editors like
 
 		http://www.vim.org/
 
-Alternatively you may want a GUI-based text editor, like Atom: 
+Alternatively you may want a GUI-based text editor, like VSCodium: 
 
-		https://atom.io/
+		[https://vscodium.com/](https://vscodium.com/)
 
 Or Sublime: 
 
