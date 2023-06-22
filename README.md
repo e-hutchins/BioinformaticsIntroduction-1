@@ -44,7 +44,7 @@ If you like to work in the terminal you can use terminal-based text editors like
 
 Alternatively you may want a GUI-based text editor, like VSCodium: 
 
-		[https://vscodium.com/](https://vscodium.com/)
+		https://vscodium.com/
 
 Or Sublime: 
 
